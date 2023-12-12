@@ -5,5 +5,8 @@ package dev.mccue.html;
  * @param contents The contents to insert into the HTML.
  */
 record Raw(String contents) {
+    Raw(String contents) {
+        this.contents = contents == null ? "" : contents;
+    }
 }
 

@@ -31,14 +31,14 @@ enum HtmlProcessor implements StringTemplate.Processor<Html, RuntimeException> {
         switch (value) {
             case null -> strings.add("");
             case Raw raw -> strings.add(raw.contents());
+            case Html html -> strings.addAll(html.fragments);
+            case HtmlEncodable toHtml -> strings.addAll(toHtml.toHtml().fragments);
             case Collection<?> valueList -> {
                 for (var subValue : valueList) {
                     escapeValue(strings, subValue);
                 }
             }
             case Stream<?> valueStream -> valueStream.forEach(subValue -> escapeValue(strings, subValue));
-            case Html html -> strings.addAll(html.fragments);
-            case HtmlEncodable toHtml -> strings.addAll(toHtml.toHtml().fragments);
             default -> strings.add(escapeHTML(value.toString()));
         }
     }
