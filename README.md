@@ -16,7 +16,7 @@ Expect to have to upgrade.
 <dependency>
     <groupId>dev.mccue</groupId>
     <artifactId>html</artifactId>
-    <version>0.0.1-alpha1</version>
+    <version>0.0.1-alpha3</version>
 </dependency>
 ```
 
@@ -24,7 +24,7 @@ Expect to have to upgrade.
 
 ```groovy
 dependencies {
-    implementation("dev.mccue:html:0.0.1-alpha1")
+    implementation("dev.mccue:html:0.0.1-alpha3")
 }
 ```
 
