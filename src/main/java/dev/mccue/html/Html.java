@@ -1,10 +1,13 @@
 package dev.mccue.html;
 
+import org.intellij.lang.annotations.Language;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 public final class Html implements HtmlEncodable {
+    @Language("HTML")
     public static final StringTemplate.Processor<Html, RuntimeException> HTML
             = HtmlProcessor.INSTANCE;
 

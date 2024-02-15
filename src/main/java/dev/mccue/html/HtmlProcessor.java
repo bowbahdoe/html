@@ -1,7 +1,5 @@
 package dev.mccue.html;
 
-
-
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
@@ -25,7 +23,9 @@ enum HtmlProcessor implements StringTemplate.Processor<Html, RuntimeException> {
             }
         }
         return out.toString();
+
     }
+
 
     static void escapeValue(ArrayList<String> strings, Object value) {
         switch (value) {

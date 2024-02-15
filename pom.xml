@@ -6,7 +6,7 @@
 
     <groupId>dev.mccue</groupId>
     <artifactId>html</artifactId>
-    <version>0.0.1-alpha2</version>
+    <version>0.0.1-alpha3</version>
     <packaging>jar</packaging>
 
     <properties>
@@ -48,6 +48,12 @@
             <artifactId>junit-jupiter-engine</artifactId>
             <version>5.9.0</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>24.1.0</version>
+            <scope>provided</scope>
         </dependency>
     </dependencies>
 
